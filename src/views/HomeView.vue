@@ -1,13 +1,13 @@
 <template>
-  <NandClusterV />
+  <ClusterSelectTopV />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import NandClusterV from '@/components/NandClusterV.vue';
+import ClusterSelectTopV from '@/components/ClusterSelectTopV.vue';
 
 export default defineComponent({
   name: 'HomeView',
-  components: { NandClusterV },
+  components: { ClusterSelectTopV },
 });
 </script>

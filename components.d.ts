@@ -5,8 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ClstElementV: typeof import('./src/components/ClstElementV.vue')['default']
+    ClusterSelectTopV: typeof import('./src/components/ClusterSelectTopV.vue')['default']
+    ClustersV: typeof import('./src/components/ClustersV.vue')['default']
+    DividerV: typeof import('./src/components/DividerV.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

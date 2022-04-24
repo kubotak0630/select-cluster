@@ -78,17 +78,21 @@ export default defineComponent({
   // width: 24px;
   height: 24px;
   border: solid 1px gray;
-  border-radius: 5px;
+  border-radius: 6px;
   margin: 0 0px;
   text-align: center;
   line-height: 24px;
   font-size: 16px;
   background-color: #ffebcd;
 
+  &.is-cpbc {
+    border-color: #f30100;
+  }
+
   &.pushed {
     color: white;
     background-color: #eb6100;
-    border-color: red;
+    border-color: #f30100;
   }
 
   &:hover {
@@ -100,6 +104,6 @@ export default defineComponent({
 .under-line {
   margin-left: 3px;
   height: 3px;
-  background-color: darkblue;
+  background-color: #f30100;
 }
 </style>

@@ -60,7 +60,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const CLST_STD_WIDTH = 28; //C48の1clstのサイズ 描画のXサイズはこの値に連動する
+    const CLST_STD_WIDTH = 26; //C48の1clstのサイズ 描画のXサイズはこの値に連動する
     const resetToggle = ref(false);
     const allSelToggle = ref(false);
     const clstList: Ref<number[]> = ref([]);

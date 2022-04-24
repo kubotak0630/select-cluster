@@ -1,7 +1,10 @@
 <template>
   <div>
-    <el-button type="primary" @click="onClickClearBtn">Reset</el-button>
-    <el-button type="primary" @click="onClickAllSelectBtn">All Select</el-button>
+    <span>{{ text }}</span>
+    <el-button type="primary" size="default" @click="onClickClearBtn">Reset</el-button>
+    <el-button type="primary" size="default" @click="onClickAllSelectBtn">All Select</el-button>
+    <el-button type="primary" size="default" @click="onClickSetRM">Set RM</el-button>
+    <span class="clst-list">{{ clstList }}</span>
     <div class="clusters-wrapeer" :style="{ 'min-width': clustersMinWidth }">
       <div class="pg-wrapper">
         <div class="pg-type lo-page" :style="{ width: pgRectWidth }">Lower</div>
@@ -40,8 +43,6 @@
       </div>
       <DivederV v-for="n in 11" :key="n" :posX="n * CLST_STD_WIDTH * 4" />
     </div>
-
-    {{ clstList }}
   </div>
 </template>
 
@@ -56,6 +57,10 @@ export default defineComponent({
   props: {
     clustTotalNum: {
       type: Number,
+      required: true,
+    },
+    text: {
+      type: String,
       required: true,
     },
   },
@@ -87,6 +92,10 @@ export default defineComponent({
       }
     };
 
+    const onClickSetRM = () => {
+      console.log('call set RM');
+    };
+
     const clstWidth = computed(() => {
       return `${(48.0 / props.clustTotalNum) * CLST_STD_WIDTH}px`;
     });
@@ -102,6 +111,7 @@ export default defineComponent({
       onEmitPushed,
       clstList,
       onClickAllSelectBtn,
+      onClickSetRM,
       clstWidth,
       plRectWidth,
       pgRectWidth,
@@ -175,5 +185,9 @@ export default defineComponent({
       // background-color: skyblue;
     }
   }
+}
+
+.clst-list {
+  margin-left: 20px;
 }
 </style>

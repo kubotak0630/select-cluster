@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     ClustersV: typeof import('./src/components/ClustersV.vue')['default']
     DividerV: typeof import('./src/components/DividerV.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

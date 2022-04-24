@@ -30,5 +30,8 @@ export default defineComponent({
   width: 2px;
   height: 60px;
   background-color: gray;
+
+  // CPBCクラスタで線上でボタンをクリックさせるため
+  pointer-events: none;
 }
 </style>

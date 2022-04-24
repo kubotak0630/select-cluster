@@ -4,7 +4,7 @@
     <el-button type="primary" @click="onClickAllSelectBtn">All Select</el-button>
     <div class="clusters-wrapeer" :style="{ 'min-width': clustersMinWidth }">
       <div class="pg-wrapper">
-        <div class="pg-type lo-page" :style="{ width: pgRectWidth }">Lowera</div>
+        <div class="pg-type lo-page" :style="{ width: pgRectWidth }">Lower</div>
         <div class="pg-type mid-page" :style="{ width: pgRectWidth }">Middle</div>
         <div class="pg-type upper-page" :style="{ width: pgRectWidth }">Upper</div>
       </div>
